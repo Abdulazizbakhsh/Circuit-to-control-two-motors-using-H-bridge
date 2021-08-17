@@ -1,0 +1,38 @@
+# Circuit-to-control-two-motors-using-H-bridge
+//Motor 1:
+#define Ena1 10
+#define in1 9
+#define in2 8
+//Motor 2:
+#define Ena1 11
+#define in1 12
+#define in2 13
+int speeda=120;
+int Direc1=1;
+int Direc2=0;
+
+int speedb=120;
+int Direc3=1;
+int Direc4=0;
+void setup() {
+  // put your setup code here, to run once:
+pinMode(Ena,OUTPOT);
+pinMode(IN1,OUTPOT);
+pinMode(IN2,OUTPOT);
+pinMode(Enb,OUTPOT);
+pinMode(IN3,OUTPOT);
+pinMode(IN4,OUTPOT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+//Motor 1:
+digitalWrite(IN1,Direc1);
+digitalWrite(IN1,Direc2);
+analogWrite(Ena,speed1);
+//Motor 2:
+digitalWrite(IN3,Direc3);
+digitalWrite(IN4,Direc4);
+analogWrite(Enb,speed1);
+
+}
